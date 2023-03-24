@@ -8,11 +8,15 @@ function countDown() {
   const sec = seconds < 10 ? "0" + seconds : seconds;
 
   countdownDisplay.innerHTML = `${minutes} : ${sec}`;
+  if (totalSeconds <= 59) {
+    countdownDisplay.style.color = "rgb(204, 39, 2)";
+  }
 
   if (totalSeconds > 0) {
     totalSeconds--;
   } else {
     countdownDisplay.innerHTML = "Fin du compte à rebours";
+    countdownDisplay.style.color = "brown";
     clearInterval(interval);
   }
 }
