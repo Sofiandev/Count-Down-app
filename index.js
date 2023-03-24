@@ -26,6 +26,6 @@ form.addEventListener("submit", (e) => {
     totalSeconds = choice.value * 60;
     choice.value = "";
     clearInterval(interval);
-    interval = setInterval(countDown, 100);
+    interval = setInterval(countDown, 1000);
   }
 });
